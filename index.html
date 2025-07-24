@@ -109,14 +109,30 @@
                 <a href="#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
             </nav>
             
-            <button class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+            <button onclick="scrollToContact()" class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
                 Book Appointment
             </button>
             
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-dark">
+            <button id="mobile-menu-btn" class="md:hidden text-dark">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-lg">
+            <div class="container mx-auto px-4 py-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#home" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Home</a>
+                    <a href="#about" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">About</a>
+                    <a href="#services" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Services</a>
+                    <a href="#testimonials" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Testimonials</a>
+                    <a href="#contact" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Contact</a>
+                    <button onclick="scrollToContact()" class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105 text-center">
+                        Book Appointment
+                    </button>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -126,10 +142,10 @@
             <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-on-scroll">Ultra-Modern Dental Care Center</h1>
             <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-on-scroll">Your smile is our priority. Experience cutting-edge dental care in the heart of Nairobi.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-                <button class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
+                <button onclick="scrollToContact()" class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
                     Book an Appointment
                 </button>
-                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
+                <button onclick="scrollToServices()" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
                     Our Services
                 </button>
             </div>
@@ -201,7 +217,7 @@
                         <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Customized treatment plans</li>
                         <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Long-lasting results</li>
                     </ul>
-                    <a href="/teeth-whitening.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    <a href="teeth-whitening.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 2 -->
@@ -216,7 +232,7 @@
                         <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Natural appearance</li>
                         <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Long-term solution</li>
                     </ul>
-                    <a href="/dental-implants.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    <a href="dental-implants.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 3 -->
@@ -231,7 +247,7 @@
                         <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Invisalign clear aligners</li>
                         <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Personalized treatment</li>
                     </ul>
-                    <a href="/orthodontics.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    <a href="orthodontics.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 4 -->
@@ -246,7 +262,7 @@
                         <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Dental bonding</li>
                         <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Smile makeovers</li>
                     </ul>
-                    <a href="/cosmetic-dentistry.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    <a href="cosmetic-dentistry.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 5 -->
@@ -261,7 +277,7 @@
                         <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Gum grafting</li>
                         <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Regenerative procedures</li>
                     </ul>
-                    <a href="/periodontal-care.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    <a href="periodontal-care.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 6 -->
@@ -276,7 +292,7 @@
                         <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Preventive education</li>
                         <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Early intervention</li>
                     </ul>
-                    <a href="/pediatric-dentistry.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    <a href="pediatric-dentistry.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
             </div>
         </div>
@@ -565,6 +581,30 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        // Scroll to contact section
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Scroll to services section
+        function scrollToServices() {
+            document.getElementById('services').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
         // Animation on scroll
         document.addEventListener('DOMContentLoaded', function() {
             const observer = new IntersectionObserver((entries) => {
