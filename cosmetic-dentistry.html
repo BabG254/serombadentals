@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetic Dentistry - Seromba Dentals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0077b6',
+                        secondary: '#00b4d8',
+                        accent: '#ff9e00',
+                        light: '#f8f9fa',
+                        dark: '#212529'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,119,182,0.9) 0%, rgba(0,180,216,0.9) 100%), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Header and other content similar to other service pages -->
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
+        <a href="tel:+254712858686" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 floating">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+        <a href="https://wa.me/254712858686" target="_blank" class="bg-green-400 text-white p-4 rounded-full shadow-lg hover:bg-green-500 transition-all transform hover:scale-110 floating">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
+                    <i class="fas fa-tooth text-white text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-primary">Seromba Dentals</h1>
+                    <p class="text-xs text-gray-600">Your Trusted Dental Care Destination</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                <a href="index.html#about" class="text-dark hover:text-primary font-medium transition-colors">About</a>
+                <a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
+                <a href="index.html#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Testimonials</a>
+                <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+            </nav>
+            
+            <button class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+                Book Appointment
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">Cosmetic Dentistry</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Transform your smile with our advanced cosmetic dental procedures for a more confident, beautiful you.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
+                    Get Smile Makeover Consultation
+                </button>
+                <a href="index.html#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cosmetic Services -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Cosmetic Dental Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Enhance your smile with our comprehensive range of cosmetic treatments.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light rounded-xl shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-gem text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Porcelain Veneers</h3>
+                    <p class="text-gray-600 mb-6">Thin shells that cover the front surface of teeth for a perfect smile.</p>
+                    <div class="text-2xl font-bold text-primary mb-4">From KSh 25,000/tooth</div>
+                </div>
+                
+                <div class="bg-light rounded-xl shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tooth text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Dental Bonding</h3>
+                    <p class="text-gray-600 mb-6">Tooth-colored resin to repair chips, cracks, and gaps.</p>
+                    <div class="text-2xl font-bold text-primary mb-4">From KSh 8,000/tooth</div>
+                </div>
+                
+                <div class="bg-light rounded-xl shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-crown text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Dental Crowns</h3>
+                    <p class="text-gray-600 mb-6">Custom caps that restore damaged teeth to full function.</p>
+                    <div class="text-2xl font-bold text-primary mb-4">From KSh 15,000/tooth</div>
+                </div>
+                
+                <div class="bg-light rounded-xl shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-smile text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Smile Makeover</h3>
+                    <p class="text-gray-600 mb-6">Complete smile transformation combining multiple treatments.</p>
+                    <div class="text-2xl font-bold text-primary mb-4">From KSh 150,000</div>
+                </div>
+                
+                <div class="bg-light rounded-xl shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-cut text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Gum Contouring</h3>
+                    <p class="text-gray-600 mb-6">Reshape gummy smiles for better tooth-to-gum ratio.</p>
+                    <div class="text-2xl font-bold text-primary mb-4">From KSh 20,000</div>
+                </div>
+                
+                <div class="bg-light rounded-xl shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bridge text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Dental Bridges</h3>
+                    <p class="text-gray-600 mb-6">Replace missing teeth with natural-looking bridges.</p>
+                    <div class="text-2xl font-bold text-primary mb-4">From KSh 30,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Amazing Transformations</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">See the incredible results our patients have achieved.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Smile transformation" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Porcelain Veneers</h3>
+                        <p class="text-gray-600">Complete smile makeover with 8 porcelain veneers for a natural, beautiful result.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Teeth whitening results" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Teeth Whitening</h3>
+                        <p class="text-gray-600">Professional whitening treatment resulting in 6 shades brighter smile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="fas fa-tooth text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Seromba Dentals</h3>
+                            <p class="text-gray-400 text-sm">Your Trusted Dental Care Destination</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Providing exceptional dental care with cutting-edge technology and a compassionate approach in the heart of Nairobi.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="teeth-whitening.html" class="text-gray-400 hover:text-white transition-colors">Teeth Whitening</a></li>
+                        <li><a href="dental-implants.html" class="text-gray-400 hover:text-white transition-colors">Dental Implants</a></li>
+                        <li><a href="orthodontics.html" class="text-gray-400 hover:text-white transition-colors">Orthodontics</a></li>
+                        <li><a href="cosmetic-dentistry.html" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span>Corner House, 5th Floor, Kimathi St., Nairobi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-primary mt-1 mr-3"></i>
+                            <div>
+                                <p>+254 712 858 686</p>
+                                <p>+254 732 858 686</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+                            <span>info@serombadentals.co.ke</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Seromba Dentals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

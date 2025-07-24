@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teeth Whitening - Seromba Dentals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0077b6',
+                        secondary: '#00b4d8',
+                        accent: '#ff9e00',
+                        light: '#f8f9fa',
+                        dark: '#212529'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,119,182,0.9) 0%, rgba(0,180,216,0.9) 100%), url('https://images.unsplash.com/photo-1606811962042-9ee76e67ed4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
+        <a href="tel:+254712858686" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 floating">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+        <a href="https://wa.me/254712858686" target="_blank" class="bg-green-400 text-white p-4 rounded-full shadow-lg hover:bg-green-500 transition-all transform hover:scale-110 floating">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
+                    <i class="fas fa-tooth text-white text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-primary">Seromba Dentals</h1>
+                    <p class="text-xs text-gray-600">Your Trusted Dental Care Destination</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                <a href="index.html#about" class="text-dark hover:text-primary font-medium transition-colors">About</a>
+                <a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
+                <a href="index.html#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Testimonials</a>
+                <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+            </nav>
+            
+            <button class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+                Book Appointment
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">Professional Teeth Whitening</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Brighten your smile with our advanced teeth whitening treatments for a confident, radiant smile.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
+                    Book Whitening Session
+                </button>
+                <a href="index.html#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
+                    Get Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Teeth Whitening Treatment" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Advanced Teeth Whitening Technology</h2>
+                    <p class="text-gray-700 mb-6 text-lg">Our professional teeth whitening service uses the latest technology to safely and effectively brighten your teeth by several shades in just one session.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Safe & Effective</h4>
+                                <p class="text-gray-600">FDA-approved whitening agents that protect your enamel while removing stains.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Fast Results</h4>
+                                <p class="text-gray-600">See immediate results in just one 60-90 minute session.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Long-lasting</h4>
+                                <p class="text-gray-600">Results can last 1-3 years with proper care and maintenance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-primary hover:bg-secondary text-white font-bold px-8 py-3 rounded-lg transition-all transform hover:scale-105">
+                        Schedule Your Whitening
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Process -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Whitening Process</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A simple, comfortable process that delivers exceptional results.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Consultation & Exam</h3>
+                    <p class="text-gray-600">We assess your teeth and discuss your whitening goals to create a personalized treatment plan.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Protection & Preparation</h3>
+                    <p class="text-gray-600">We protect your gums and apply the professional-grade whitening gel to your teeth.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Activation & Results</h3>
+                    <p class="text-gray-600">We activate the whitening gel and monitor the process to achieve optimal results safely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Whitening Packages</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Choose the package that best fits your needs and budget.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-light rounded-xl shadow-lg p-8 text-center">
+                    <h3 class="text-xl font-bold text-dark mb-4">Basic Whitening</h3>
+                    <div class="text-3xl font-bold text-primary mb-6">KSh 15,000</div>
+                    <ul class="text-gray-600 mb-8 space-y-2">
+                        <li>Single whitening session</li>
+                        <li>Up to 3 shades lighter</li>
+                        <li>Take-home care kit</li>
+                        <li>Follow-up consultation</li>
+                    </ul>
+                    <button class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 rounded-lg transition-all">
+                        Choose Basic
+                    </button>
+                </div>
+                
+                <div class="bg-primary rounded-xl shadow-lg p-8 text-center text-white relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-dark px-4 py-1 rounded-full text-sm font-bold">
+                        Most Popular
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Premium Whitening</h3>
+                    <div class="text-3xl font-bold mb-6">KSh 25,000</div>
+                    <ul class="mb-8 space-y-2">
+                        <li>Two whitening sessions</li>
+                        <li>Up to 6 shades lighter</li>
+                        <li>Custom whitening trays</li>
+                        <li>Professional whitening gel</li>
+                        <li>3-month follow-up</li>
+                    </ul>
+                    <button class="w-full bg-accent hover:bg-yellow-500 text-dark font-bold py-3 rounded-lg transition-all">
+                        Choose Premium
+                    </button>
+                </div>
+                
+                <div class="bg-light rounded-xl shadow-lg p-8 text-center">
+                    <h3 class="text-xl font-bold text-dark mb-4">Deluxe Package</h3>
+                    <div class="text-3xl font-bold text-primary mb-6">KSh 35,000</div>
+                    <ul class="text-gray-600 mb-8 space-y-2">
+                        <li>Three whitening sessions</li>
+                        <li>Up to 8 shades lighter</li>
+                        <li>Custom whitening trays</li>
+                        <li>Professional whitening gel</li>
+                        <li>6-month maintenance plan</li>
+                        <li>Complimentary cleaning</li>
+                    </ul>
+                    <button class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 rounded-lg transition-all">
+                        Choose Deluxe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-dark mb-3">Is teeth whitening safe?</h3>
+                    <p class="text-gray-600">Yes, professional teeth whitening is completely safe when performed by our experienced dental professionals using FDA-approved products.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-dark mb-3">How long do results last?</h3>
+                    <p class="text-gray-600">With proper care, teeth whitening results can last 1-3 years. We provide aftercare instructions and maintenance products to help extend your results.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-dark mb-3">Will I experience sensitivity?</h3>
+                    <p class="text-gray-600">Some patients may experience mild sensitivity during or after treatment. We use desensitizing agents and can adjust the treatment to minimize discomfort.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-dark mb-3">How many shades whiter will my teeth get?</h3>
+                    <p class="text-gray-600">Most patients see their teeth become 3-8 shades whiter, depending on the starting shade and the package chosen. We'll discuss realistic expectations during your consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready for a Brighter Smile?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Book your teeth whitening consultation today and take the first step towards a more confident smile.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105">
+                    Book Consultation
+                </button>
+                <a href="tel:+254712858686" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="fas fa-tooth text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Seromba Dentals</h3>
+                            <p class="text-gray-400 text-sm">Your Trusted Dental Care Destination</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Providing exceptional dental care with cutting-edge technology and a compassionate approach in the heart of Nairobi.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="teeth-whitening.html" class="text-gray-400 hover:text-white transition-colors">Teeth Whitening</a></li>
+                        <li><a href="dental-implants.html" class="text-gray-400 hover:text-white transition-colors">Dental Implants</a></li>
+                        <li><a href="orthodontics.html" class="text-gray-400 hover:text-white transition-colors">Orthodontics</a></li>
+                        <li><a href="cosmetic-dentistry.html" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span>Corner House, 5th Floor, Kimathi St., Nairobi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-primary mt-1 mr-3"></i>
+                            <div>
+                                <p>+254 712 858 686</p>
+                                <p>+254 732 858 686</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+                            <span>info@serombadentals.co.ke</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Seromba Dentals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

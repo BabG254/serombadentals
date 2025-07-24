@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodontal Care - Seromba Dentals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0077b6',
+                        secondary: '#00b4d8',
+                        accent: '#ff9e00',
+                        light: '#f8f9fa',
+                        dark: '#212529'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,119,182,0.9) 0%, rgba(0,180,216,0.9) 100%), url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
+        <a href="tel:+254712858686" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 floating">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+        <a href="https://wa.me/254712858686" target="_blank" class="bg-green-400 text-white p-4 rounded-full shadow-lg hover:bg-green-500 transition-all transform hover:scale-110 floating">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
+                    <i class="fas fa-tooth text-white text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-primary">Seromba Dentals</h1>
+                    <p class="text-xs text-gray-600">Your Trusted Dental Care Destination</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                <a href="index.html#about" class="text-dark hover:text-primary font-medium transition-colors">About</a>
+                <a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
+                <a href="index.html#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Testimonials</a>
+                <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+            </nav>
+            
+            <button class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+                Book Appointment
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">Periodontal Care</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Comprehensive gum disease treatment to restore and maintain healthy gums for optimal oral health.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
+                    Get Gum Health Assessment
+                </button>
+                <a href="index.html#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gum Disease Info -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Understanding Gum Disease</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Gum disease affects millions of people worldwide and is a leading cause of tooth loss in adults.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-exclamation-triangle text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Gingivitis</h3>
+                    <p class="text-gray-600">Early stage gum disease with inflammation, bleeding, and swelling of gums.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-fire text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Periodontitis</h3>
+                    <p class="text-gray-600">Advanced gum disease affecting the bones and tissues supporting teeth.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-skull text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Advanced Periodontitis</h3>
+                    <p class="text-gray-600">Severe bone loss and tooth mobility that may require tooth extraction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Options -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Periodontal Treatments</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive treatment options to restore gum health at every stage.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-broom text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Deep Cleaning</h3>
+                    <p class="text-gray-600 mb-4">Scaling and root planing to remove plaque and tartar below the gum line.</p>
+                    <div class="text-lg font-bold text-primary">From KSh 8,000</div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-cut text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Gum Surgery</h3>
+                    <p class="text-gray-600 mb-4">Flap surgery to reduce pocket depth and restore gum health.</p>
+                    <div class="text-lg font-bold text-primary">From KSh 25,000</div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Gum Grafting</h3>
+                    <p class="text-gray-600 mb-4">Tissue grafts to cover exposed roots and restore gum tissue.</p>
+                    <div class="text-lg font-bold text-primary">From KSh 30,000</div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-seedling text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Bone Regeneration</h3>
+                    <p class="text-gray-600 mb-4">Guided tissue regeneration to restore lost bone and tissue.</p>
+                    <div class="text-lg font-bold text-primary">From KSh 50,000</div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heartbeat text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Maintenance Therapy</h3>
+                    <p class="text-gray-600 mb-4">Regular cleanings and monitoring to prevent disease recurrence.</p>
+                    <div class="text-lg font-bold text-primary">From KSh 5,000</div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-prescription text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Antibiotic Therapy</h3>
+                    <p class="text-gray-600 mb-4">Targeted antibiotic treatment to eliminate bacterial infections.</p>
+                    <div class="text-lg font-bold text-primary">From KSh 3,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning Signs -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Warning Signs of Gum Disease</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Early detection is key to successful treatment. Watch for these symptoms.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-red-50 rounded-lg p-6 text-center">
+                    <i class="fas fa-tint text-red-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-dark mb-2">Bleeding Gums</h3>
+                    <p class="text-gray-600 text-sm">Gums that bleed during brushing or flossing</p>
+                </div>
+                
+                <div class="bg-red-50 rounded-lg p-6 text-center">
+                    <i class="fas fa-fire text-red-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-dark mb-2">Swollen Gums</h3>
+                    <p class="text-gray-600 text-sm">Red, swollen, or tender gums</p>
+                </div>
+                
+                <div class="bg-red-50 rounded-lg p-6 text-center">
+                    <i class="fas fa-wind text-red-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-dark mb-2">Bad Breath</h3>
+                    <p class="text-gray-600 text-sm">Persistent bad breath or bad taste</p>
+                </div>
+                
+                <div class="bg-red-50 rounded-lg p-6 text-center">
+                    <i class="fas fa-arrows-alt text-red-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-dark mb-2">Loose Teeth</h3>
+                    <p class="text-gray-600 text-sm">Teeth that feel loose or are shifting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Prevention is Key</h2>
+                    <p class="text-gray-700 mb-8 text-lg">The best treatment for gum disease is prevention. Follow these simple steps to maintain healthy gums.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Daily Brushing & Flossing</h4>
+                                <p class="text-gray-600">Brush twice daily and floss once to remove plaque buildup.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Regular Dental Cleanings</h4>
+                                <p class="text-gray-600">Professional cleanings every 6 months to remove tartar.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Healthy Lifestyle</h4>
+                                <p class="text-gray-600">Don't smoke, eat a balanced diet, and manage stress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1606811962042-9ee76e67ed4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Gum Care Prevention" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Don't Ignore Gum Disease</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Early treatment can save your teeth and prevent serious health complications. Schedule your gum health assessment today.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105">
+                    Book Gum Assessment
+                </button>
+                <a href="tel:+254712858686" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="fas fa-tooth text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Seromba Dentals</h3>
+                            <p class="text-gray-400 text-sm">Your Trusted Dental Care Destination</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Providing exceptional dental care with cutting-edge technology and a compassionate approach in the heart of Nairobi.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="teeth-whitening.html" class="text-gray-400 hover:text-white transition-colors">Teeth Whitening</a></li>
+                        <li><a href="dental-implants.html" class="text-gray-400 hover:text-white transition-colors">Dental Implants</a></li>
+                        <li><a href="orthodontics.html" class="text-gray-400 hover:text-white transition-colors">Orthodontics</a></li>
+                        <li><a href="cosmetic-dentistry.html" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span>Corner House, 5th Floor, Kimathi St., Nairobi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-primary mt-1 mr-3"></i>
+                            <div>
+                                <p>+254 712 858 686</p>
+                                <p>+254 732 858 686</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+                            <span>info@serombadentals.co.ke</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Seromba Dentals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
