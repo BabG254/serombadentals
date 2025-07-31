@@ -85,7 +85,13 @@
             width: calc(200% + 16px);
         }
         .animate-scroll-right {
-            animation: scroll-right 30s linear infinite;
+            animation: scroll-right 15s linear infinite;
+        }
+        /* Faster animation on mobile */
+        @media (max-width: 768px) {
+            .animate-scroll-right {
+                animation: scroll-right 8s linear infinite;
+            }
         }
         @keyframes scroll-right {
             0% {
@@ -115,12 +121,8 @@
     <header class="sticky top-0 z-40 bg-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
-                    <i class="fas fa-tooth text-white text-2xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold text-primary">Seromba Dentals</h1>
-                    <p class="text-xs text-gray-600">Your Trusted Dental Care Destination</p>
+                <div class="h-12 flex items-center justify-center">
+                    <img src="logo.png" alt="Seromba Dentals Logo" class="h-12 w-auto object-contain">
                 </div>
             </div>
             
@@ -518,17 +520,17 @@
                         <div class="mt-8">
                             <h4 class="font-bold text-dark mb-4 text-sm lg:text-base">Follow Us</h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
+                                <a href="https://www.facebook.com/share/16JurNQAEh/" target="_blank" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
                                     <i class="fab fa-facebook-f text-sm lg:text-base"></i>
                                 </a>
-                                <a href="#" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
+                                <a href="https://www.instagram.com/serombadentals?igsh=bmVqMnN2ajc2Z2Zn" target="_blank" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
                                     <i class="fab fa-instagram text-sm lg:text-base"></i>
                                 </a>
-                                <a href="#" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
+                                <a href="https://x.com/serombadental?t=UkmbDeaOy0f5EqrZqVUY3w&s=09" target="_blank" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
                                     <i class="fab fa-twitter text-sm lg:text-base"></i>
                                 </a>
-                                <a href="#" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
-                                    <i class="fab fa-linkedin-in text-sm lg:text-base"></i>
+                                <a href="https://www.tiktok.com/@serombadentals?_t=ZM-8yURW93xPvS&_r=1" target="_blank" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-secondary transition-colors">
+                                    <i class="fab fa-tiktok text-sm lg:text-base"></i>
                                 </a>
                             </div>
                         </div>
@@ -580,6 +582,23 @@
                             </div>
                             
                             <div>
+                                <label class="block text-gray-700 mb-2 text-sm lg:text-base">Preferred Time</label>
+                                <select class="w-full px-3 py-2 lg:px-4 lg:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm lg:text-base">
+                                    <option>Select a time</option>
+                                    <option>8:00 AM - 9:00 AM</option>
+                                    <option>9:00 AM - 10:00 AM</option>
+                                    <option>10:00 AM - 11:00 AM</option>
+                                    <option>11:00 AM - 12:00 PM</option>
+                                    <option>12:00 PM - 1:00 PM</option>
+                                    <option>1:00 PM - 2:00 PM</option>
+                                    <option>2:00 PM - 3:00 PM</option>
+                                    <option>3:00 PM - 4:00 PM</option>
+                                    <option>4:00 PM - 5:00 PM</option>
+                                    <option>5:00 PM - 6:00 PM</option>
+                                </select>
+                            </div>
+                            
+                            <div>
                                 <label class="block text-gray-700 mb-2 text-sm lg:text-base">Message</label>
                                 <textarea rows="3" class="w-full px-3 py-2 lg:px-4 lg:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm lg:text-base"></textarea>
                             </div>
@@ -606,27 +625,23 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
-                            <i class="fas fa-tooth text-white text-2xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Seromba Dentals</h3>
-                            <p class="text-gray-400 text-sm">Your Trusted Dental Care Destination</p>
+                        <div class="w-20 h-16 bg-white flex items-center justify-center p-2">
+                            <img src="logo.png" alt="Seromba Dentals Logo" class="w-16 h-12 object-contain">
                         </div>
                     </div>
                     <p class="text-gray-400 mb-6">Providing exceptional dental care with cutting-edge technology and a compassionate approach in the heart of Nairobi.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                        <a href="https://www.facebook.com/share/16JurNQAEh/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                        <a href="https://www.instagram.com/serombadentals?igsh=bmVqMnN2ajc2Z2Zn" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                        <a href="https://x.com/serombadental?t=UkmbDeaOy0f5EqrZqVUY3w&s=09" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.tiktok.com/@serombadentals?_t=ZM-8yURW93xPvS&_r=1" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
+                            <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
