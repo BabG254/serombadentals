@@ -75,6 +75,29 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Partners Carousel Animation */
+        .partners-carousel-container {
+            mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .partners-carousel {
+            width: calc(200% + 16px);
+        }
+        .animate-scroll-right {
+            animation: scroll-right 30s linear infinite;
+        }
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .partners-carousel:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-light">
@@ -367,6 +390,82 @@
         </div>
     </section>
 
+    <!-- Corporate Partners Section -->
+    <section id="partners" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Corporate Partners</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We're proud to collaborate with leading organizations in healthcare and dental technology.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <!-- Partners Carousel -->
+            <div class="partners-carousel-container overflow-hidden relative">
+                <div class="partners-carousel flex animate-scroll-right">
+                    <!-- Partner 1 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="old mutual.png" alt="Old Mutual" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 2 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="mtiba.png" alt="Mtiba" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 3 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="Kenbright.png" alt="Kenbright" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 4 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 5 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="pioneer.png" alt="Pioneer" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 6 -->
+                    <div class="partner-item flex-shrink-0 mx-8 bg-white rounded-lg p-2">
+                        <img src="mua.png" alt="MUA" class="h-16 md:h-20 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 7 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="lucent.png" alt="Lucent" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 8 -->
+                    <div class="partner-item flex-shrink-0 mx-8 bg-white rounded-lg p-2">
+                        <img src="eabl.png" alt="EABL" class="h-16 md:h-20 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 9 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="heritage.jpg" alt="Heritage Insurance" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 10 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="mtn.png" alt="MTN" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 11 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="liaison.png" alt="Liaison Group" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 12 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="kenyanalliance.png" alt="Kenyan Alliance" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner 13 -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="star.png" alt="Star Health" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Duplicate for seamless scroll -->
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="old mutual.png" alt="Old Mutual" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8">
+                        <img src="mtiba.png" alt="Mtiba" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-light">
         <div class="container mx-auto px-4">
@@ -410,8 +509,8 @@
                                 <div>
                                     <h4 class="font-bold text-dark text-sm lg:text-base">Opening Hours</h4>
                                     <p class="text-gray-700 text-sm lg:text-base">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                                    <p class="text-gray-700 text-sm lg:text-base">Saturday: 9:00 AM - 2:00 PM</p>
-                                    <p class="text-gray-700 text-sm lg:text-base">Sunday: Closed</p>
+                                    <p class="text-gray-700 text-sm lg:text-base">Saturday: 8:00 AM - 3:00 PM</p>
+                                    <p class="text-gray-700 text-sm lg:text-base">Sundays & Public Holidays: Closed</p>
                                 </div>
                             </div>
                         </div>
@@ -570,7 +669,7 @@
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
-                            <span>info@serombadentals.co.ke</span>
+                            <span>serombadentals@gmail.com</span>
                         </li>
                     </ul>
                 </div>
