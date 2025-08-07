@@ -83,15 +83,19 @@
             -webkit-mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
         .partners-carousel {
-            width: calc(200% + 16px);
+            width: calc(300% + 24px);
         }
         .animate-scroll-right {
-            animation: scroll-right 15s linear infinite;
+            animation: scroll-right 25s linear infinite;
         }
-        /* Faster animation on mobile */
+        /* Faster animation on mobile with better visibility */
         @media (max-width: 768px) {
             .animate-scroll-right {
-                animation: scroll-right 8s linear infinite;
+                animation: scroll-right 15s linear infinite;
+            }
+            .partner-item {
+                margin-left: 1rem;
+                margin-right: 1rem;
             }
         }
         @keyframes scroll-right {
@@ -99,7 +103,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-50%);
+                transform: translateX(-33.33%);
             }
         }
         .partners-carousel:hover {
@@ -406,63 +410,114 @@
             <div class="partners-carousel-container overflow-hidden relative">
                 <div class="partners-carousel flex animate-scroll-right">
                     <!-- Partner 1 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="old mutual.png" alt="Old Mutual" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="old mutual.png" alt="Old Mutual" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 2 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="mtiba.png" alt="Mtiba" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="mtiba.png" alt="Mtiba" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 3 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="Kenbright.png" alt="Kenbright" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="Kenbright.png" alt="Kenbright" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 4 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 5 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="pioneer.png" alt="Pioneer" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="pioneer.png" alt="Pioneer" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 6 -->
-                    <div class="partner-item flex-shrink-0 mx-8 bg-white rounded-lg p-2">
-                        <img src="mua.png" alt="MUA" class="h-16 md:h-20 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8 bg-white rounded-lg p-2">
+                        <img src="mua.png" alt="MUA" class="h-12 md:h-20 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 7 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="lucent.png" alt="Lucent" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="lucent.png" alt="Lucent" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 8 -->
-                    <div class="partner-item flex-shrink-0 mx-8 bg-white rounded-lg p-2">
-                        <img src="eabl.png" alt="EABL" class="h-16 md:h-20 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8 bg-white rounded-lg p-2">
+                        <img src="eabl.png" alt="EABL" class="h-12 md:h-20 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 9 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="heritage.jpg" alt="Heritage Insurance" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="heritage.jpg" alt="Heritage Insurance" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 10 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="mtn.png" alt="MTN" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="mtn.png" alt="MTN" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 11 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="liaison.png" alt="Liaison Group" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="liaison.png" alt="Liaison Group" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 12 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="kenyanalliance.png" alt="Kenyan Alliance" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="kenyanalliance.png" alt="Kenyan Alliance" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                     <!-- Partner 13 -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="star.png" alt="Star Health" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="star.png" alt="Star Health" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
-                    <!-- Duplicate for seamless scroll -->
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="old mutual.png" alt="Old Mutual" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    
+                    <!-- First set of duplicates for seamless scroll -->
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="old mutual.png" alt="Old Mutual" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
-                    <div class="partner-item flex-shrink-0 mx-8">
-                        <img src="mtiba.png" alt="Mtiba" class="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="mtiba.png" alt="Mtiba" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="Kenbright.png" alt="Kenbright" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="pioneer.png" alt="Pioneer" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8 bg-white rounded-lg p-2">
+                        <img src="mua.png" alt="MUA" class="h-12 md:h-20 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="lucent.png" alt="Lucent" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8 bg-white rounded-lg p-2">
+                        <img src="eabl.png" alt="EABL" class="h-12 md:h-20 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="heritage.jpg" alt="Heritage Insurance" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="mtn.png" alt="MTN" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="liaison.png" alt="Liaison Group" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="kenyanalliance.png" alt="Kenyan Alliance" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="star.png" alt="Star Health" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    
+                    <!-- Second set of duplicates for extra seamless scroll -->
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="old mutual.png" alt="Old Mutual" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="mtiba.png" alt="Mtiba" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="Kenbright.png" alt="Kenbright" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-8 md:mx-8">
+                        <img src="pioneer.png" alt="Pioneer" class="h-16 md:h-24 object-contain hover:scale-105 transition-all duration-300">
                     </div>
                 </div>
             </div>
