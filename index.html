@@ -130,6 +130,14 @@
         </a>
     </div>
 
+    <!-- Calendly floating button -->
+    <div id="calendly-floating-button" class="fixed bottom-6 left-6 z-50">
+        <a href="calendar.html" class="flex items-center bg-primary text-white px-4 py-3 rounded-full shadow-lg hover:bg-secondary transition-all transform hover:scale-110 floating">
+            <i class="far fa-calendar-alt mr-2"></i>
+            <span>Book on Calendar</span>
+        </a>
+    </div>
+
     <!-- Header -->
     <header class="sticky top-0 z-40 bg-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -144,13 +152,14 @@
                 <a href="#about" class="text-dark hover:text-primary font-medium transition-colors">About</a>
                 <a href="#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
                 <a href="#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Testimonials</a>
+                <a href="calendar.html" class="text-dark hover:text-primary font-medium transition-colors">Calendar</a>
                 <a href="#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
             </nav>
             
             <div class="flex items-center space-x-4">
-                <button onclick="scrollToContact()" class="hidden md:block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+                <a href="calendar.html" class="hidden md:block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
                     Book Appointment
-                </button>
+                </a>
                 
                 <!-- Mobile Menu Button -->
                 <button onclick="toggleMobileMenu()" id="mobile-menu-btn" class="md:hidden text-dark p-2">
@@ -167,10 +176,11 @@
                     <a href="#about" onclick="toggleMobileMenu()" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">About</a>
                     <a href="#services" onclick="toggleMobileMenu()" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Services</a>
                     <a href="#testimonials" onclick="toggleMobileMenu()" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Testimonials</a>
+                    <a href="calendar.html" onclick="toggleMobileMenu()" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Calendar</a>
                     <a href="#contact" onclick="toggleMobileMenu()" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Contact</a>
-                    <button onclick="scrollToContact(); toggleMobileMenu();" class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105 text-center">
+                    <a href="calendar.html" onclick="toggleMobileMenu();" class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105 text-center">
                         Book Appointment
-                    </button>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -182,9 +192,9 @@
             <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-on-scroll">Ultra-Modern Dental Care Center</h1>
             <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-on-scroll">Your smile is our priority. Experience cutting-edge dental care in the heart of Nairobi.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-                <button onclick="scrollToContact()" class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
+                <a href="calendar.html" class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg text-center">
                     Book an Appointment
-                </button>
+                </a>
                 <button onclick="scrollToServices()" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
                     Our Services
                 </button>
@@ -694,6 +704,7 @@
                         <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
                         <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="calendar.html" class="text-gray-400 hover:text-white transition-colors">Calendar</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -750,9 +761,8 @@
 
         // Scroll to contact section
         function scrollToContact() {
-            document.getElementById('contact').scrollIntoView({
-                behavior: 'smooth'
-            });
+            // Redirect to calendar page
+            window.location.href = 'calendar.html';
         }
 
         // Scroll to services section
