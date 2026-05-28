@@ -52,12 +52,14 @@
 </head>
 <body class="bg-light">
     <!-- Floating Contact Buttons -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
-        <a href="tel:+254712858686" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 floating">
-            <i class="fas fa-phone text-xl"></i>
+    <div class="contact-action-dock" aria-label="Quick contact options">
+        <a href="https://wa.me/254712858686?text=Hello%20Seromba%20Dentals%20Clinic%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment." target="_blank" rel="noopener" class="contact-action contact-action--whatsapp">
+            <span class="contact-action__icon"><i class="fab fa-whatsapp"></i></span>
+            <span class="contact-action__text"><strong>WhatsApp</strong><small>Fast booking</small></span>
         </a>
-        <a href="https://wa.me/254712858686" target="_blank" class="bg-green-400 text-white p-4 rounded-full shadow-lg hover:bg-green-500 transition-all transform hover:scale-110 floating">
-            <i class="fab fa-whatsapp text-xl"></i>
+        <a href="tel:+254712858686" class="contact-action contact-action--call">
+            <span class="contact-action__icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="contact-action__text"><strong>Call Clinic</strong><small>Speak to us</small></span>
         </a>
     </div>
 
@@ -87,9 +89,15 @@
                 <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
             </nav>
             
-            <div class="flex items-center space-x-4">
-                <a href="calendar.html" class="hidden md:block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
-                    Book Appointment
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/254712858686?text=Hello%20Seromba%20Dentals%20Clinic%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment." target="_blank" rel="noopener" class="hidden lg:inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+                <a href="tel:+254712858686" class="hidden md:inline-flex items-center bg-primary hover:bg-secondary text-white px-5 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+                    <i class="fas fa-phone-alt mr-2"></i> Call
+                </a>
+                <a href="calendar.html" class="hidden xl:inline-flex items-center border border-primary text-primary hover:bg-primary hover:text-white px-5 py-2 rounded-full font-medium transition-all">
+                    Calendar
                 </a>
                 
                 <!-- Mobile Menu Button -->
@@ -119,8 +127,17 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-10 animate-on-scroll">
                 <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4">Book Your Dental Appointment</h1>
-                <p class="text-gray-600 max-w-2xl mx-auto">Choose a convenient time for your visit and our team will be ready to provide you with excellent dental care.</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">Choose a convenient time for your visit, or reach us directly by WhatsApp or phone for the fastest appointment support.</p>
                 <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8 animate-on-scroll">
+                <a href="https://wa.me/254712858686?text=Hello%20Seromba%20Dentals%20Clinic%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment." target="_blank" rel="noopener" class="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-4 rounded-xl shadow-lg transition-all transform hover:scale-[1.02]">
+                    <i class="fab fa-whatsapp text-xl mr-3"></i> Book via WhatsApp
+                </a>
+                <a href="tel:+254712858686" class="flex items-center justify-center bg-primary hover:bg-secondary text-white font-bold px-6 py-4 rounded-xl shadow-lg transition-all transform hover:scale-[1.02]">
+                    <i class="fas fa-phone-alt text-lg mr-3"></i> Call the Clinic
+                </a>
             </div>
             
             <div class="bg-white rounded-xl shadow-lg p-4 md:p-8 animate-on-scroll">
@@ -258,6 +275,8 @@
     <script src="footer-date.js"></script>
 </body>
 </html>
+
+
 
 
 

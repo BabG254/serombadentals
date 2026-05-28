@@ -72,12 +72,14 @@
     </script>
 </head>
 <body class="bg-light">
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
-        <a href="tel:+254712858686" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 floating">
-            <i class="fas fa-phone text-xl"></i>
+    <div class="contact-action-dock" aria-label="Quick contact options">
+        <a href="https://wa.me/254712858686?text=Hello%20Seromba%20Dentals%20Clinic%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment." target="_blank" rel="noopener" class="contact-action contact-action--whatsapp">
+            <span class="contact-action__icon"><i class="fab fa-whatsapp"></i></span>
+            <span class="contact-action__text"><strong>WhatsApp</strong><small>Fast booking</small></span>
         </a>
-        <a href="https://wa.me/254712858686" target="_blank" class="bg-green-400 text-white p-4 rounded-full shadow-lg hover:bg-green-500 transition-all transform hover:scale-110 floating">
-            <i class="fab fa-whatsapp text-xl"></i>
+        <a href="tel:+254712858686" class="contact-action contact-action--call">
+            <span class="contact-action__icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="contact-action__text"><strong>Call Clinic</strong><small>Speak to us</small></span>
         </a>
     </div>
 
@@ -93,8 +95,16 @@
                 <a href="index.html#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Testimonials</a>
                 <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
             </nav>
-            <div class="flex items-center space-x-4">
-                <a href="calendar.html" class="hidden md:block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">Book Appointment</a>
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/254712858686?text=Hello%20Seromba%20Dentals%20Clinic%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment." target="_blank" rel="noopener" class="hidden lg:inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+                <a href="tel:+254712858686" class="hidden md:inline-flex items-center bg-primary hover:bg-secondary text-white px-5 py-2 rounded-full font-medium transition-all transform hover:scale-105">
+                    <i class="fas fa-phone-alt mr-2"></i> Call
+                </a>
+                <a href="calendar.html" class="hidden xl:inline-flex items-center border border-primary text-primary hover:bg-primary hover:text-white px-5 py-2 rounded-full font-medium transition-all">
+                    Calendar
+                </a>
                 <button onclick="toggleMobileMenu()" id="mobile-menu-btn" class="md:hidden text-dark p-2">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
@@ -108,7 +118,12 @@
                     <a href="index.html#services" onclick="toggleMobileMenu()" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Services</a>
                     <a href="index.html#testimonials" onclick="toggleMobileMenu()" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Testimonials</a>
                     <a href="index.html#contact" onclick="toggleMobileMenu()" class="text-dark hover:text-primary font-medium transition-colors mobile-nav-link">Contact</a>
-                    <a href="calendar.html" onclick="toggleMobileMenu()" class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105 text-center">Book Appointment</a>
+                    <a href="https://wa.me/254712858686?text=Hello%20Seromba%20Dentals%20Clinic%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment." target="_blank" rel="noopener" onclick="toggleMobileMenu()" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 text-center">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Appointment
+                    </a>
+                    <a href="tel:+254712858686" onclick="toggleMobileMenu()" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 text-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Clinic
+                    </a>
                 </nav>
             </div>
         </div>
@@ -308,6 +323,8 @@
     <script src="footer-date.js"></script>
 </body>
 </html>
+
+
 
 
 
