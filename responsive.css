@@ -1,0 +1,88 @@
+html {
+    scroll-padding-top: 76px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 640px) {
+    .hero-bg {
+        background-position: center top;
+    }
+
+    .hero-bg h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.08;
+    }
+
+    .hero-bg p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-bg .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .hero-bg a,
+    .hero-bg button {
+        width: 100%;
+        max-width: 22rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .service-card:hover,
+    .testimonial-card:hover {
+        transform: none;
+    }
+
+    .fixed.bottom-6.right-6 {
+        right: 0.85rem;
+        bottom: 1rem;
+        gap: 0.65rem;
+    }
+
+    .fixed.bottom-6.right-6 a {
+        padding: 0.85rem;
+    }
+
+    #calendly-floating-button {
+        left: 0.85rem;
+        bottom: 1rem;
+    }
+
+    #calendly-floating-button a {
+        width: 3.2rem;
+        height: 3.2rem;
+        padding: 0;
+        justify-content: center;
+    }
+
+    #calendly-floating-button span {
+        display: none;
+    }
+
+    #calendly-floating-button i {
+        margin-right: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating,
+    .animate-scroll-right {
+        animation: none !important;
+    }
+
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+}

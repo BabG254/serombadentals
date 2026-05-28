@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seromba Dentals - Your Trusted Dental Care Destination</title>
+    <title>Seromba Dentals Clinic, Nairobi, Kenya | Modern Dental Clinic in Nairobi CBD</title>
+    <meta name="description" content="Seromba Dentals Clinic, Nairobi, Kenya provides modern dental care in Nairobi CBD, including dental implants, teeth whitening, braces, cosmetic dentistry, gum care, and family oral health services.">
     <link rel="icon" href="logo.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="responsive.css">
     <script>
         tailwind.config = {
             theme: {
@@ -32,7 +34,10 @@
             scroll-behavior: smooth;
         }
         .hero-bg {
-            background: linear-gradient(135deg, rgba(0,119,182,0.8) 0%, rgba(0,180,216,0.8) 100%), url('https://images.unsplash.com/photo-1588776813677-788d7e53a3d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background:
+                linear-gradient(135deg, rgba(0,119,182,0.68) 0%, rgba(0,180,216,0.62) 100%),
+                linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 100%),
+                url('hero-seromba-dentals-nairobi-cbd.png');
             background-size: cover;
             background-position: center;
         }
@@ -83,23 +88,45 @@
             -webkit-mask: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
         }
         .partners-carousel {
-            width: calc(200% + 32px);
+            width: max-content;
+            will-change: transform;
+        }
+        .partner-item {
+            width: 9.5rem !important;
+            height: 5.75rem !important;
+            margin-left: 0.75rem !important;
+            margin-right: 0.75rem !important;
+            padding: 0.85rem !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border: 1px solid rgba(0, 119, 182, 0.12);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 20px rgba(0, 119, 182, 0.08);
+        }
+        .partner-item img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
         }
         .animate-scroll-right {
-            animation: scroll-right 20s linear infinite;
+            animation: scroll-right 28s linear infinite;
         }
         /* Faster animation on mobile with complete visibility */
         @media (max-width: 768px) {
             .animate-scroll-right {
-                animation: scroll-right 8s linear infinite;
+                animation: scroll-right 18s linear infinite;
             }
             .partner-item {
-                margin-left: 0.125rem;
-                margin-right: 0.125rem;
-                min-width: 70px;
+                width: 7.25rem !important;
+                height: 4.6rem !important;
+                margin-left: 0.35rem !important;
+                margin-right: 0.35rem !important;
+                padding: 0.65rem !important;
             }
             .partners-carousel {
-                width: calc(400% + 16px);
+                width: max-content;
             }
             .partners-carousel-container {
                 mask: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
@@ -143,7 +170,7 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <div class="h-12 flex items-center justify-center">
-                    <img src="logo.png" alt="Seromba Dentals Logo" class="h-12 w-auto object-contain">
+                    <img src="logo.png" alt="Seromba Dentals Clinic Logo" class="h-12 w-auto object-contain" loading="lazy" decoding="async">
                 </div>
             </div>
             
@@ -187,15 +214,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg text-white py-20 md:py-32">
+    <section id="home" class="hero-bg text-white min-h-[calc(100svh-76px)] flex items-center py-16 sm:py-20 md:py-32">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-on-scroll">Ultra-Modern Dental Care Center</h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-on-scroll">Your smile is our priority. Experience cutting-edge dental care in the heart of Nairobi.</p>
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-5 md:mb-6 max-w-5xl mx-auto leading-tight animate-on-scroll drop-shadow-lg">Seromba Dentals Clinic &ndash; Trusted Modern Dental Clinic in Nairobi, Kenya for Complete Oral Care</h1>
+            <p class="text-base sm:text-xl md:text-2xl mb-8 md:mb-10 max-w-4xl mx-auto animate-on-scroll drop-shadow">Your smile comes first. At Seromba Dentals Clinic, we provide advanced, patient-centered dental care using modern technology in the heart of Nairobi. From preventive care to complex treatments, we focus on comfort, precision, and long-lasting results.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-                <a href="calendar.html" class="bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg text-center">
+                <a href="calendar.html" class="w-full sm:w-auto bg-accent hover:bg-yellow-500 text-dark font-bold px-8 py-4 rounded-full text-base md:text-lg transition-all transform hover:scale-105 shadow-lg text-center">
                     Book an Appointment
                 </a>
-                <button onclick="scrollToServices()" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-lg transition-all">
+                <button onclick="scrollToServices()" class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full text-base md:text-lg transition-all">
                     Our Services
                 </button>
             </div>
@@ -206,14 +233,14 @@
     <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">About Seromba Dentals</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">About Seromba Dentals Clinic</h2>
                 <div class="w-20 h-1 bg-accent mx-auto"></div>
             </div>
             
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 animate-on-scroll">
                     <h3 class="text-2xl font-bold text-dark mb-4">Your Trusted Dental Care Destination</h3>
-                    <p class="text-gray-700 mb-6">At Seromba Dentals, we are committed to providing exceptional dental care using the latest technology and techniques. Our state-of-the-art facility in the heart of Nairobi offers a comfortable and welcoming environment for all our patients.</p>
+                    <p class="text-gray-700 mb-6">At Seromba Dentals Clinic, we are committed to providing exceptional dental care using the latest technology and techniques. Our state-of-the-art facility in the heart of Nairobi offers a comfortable and welcoming environment for all our patients.</p>
                     <p class="text-gray-700 mb-6">Our team of experienced dentists and professionals are dedicated to helping you achieve and maintain optimal oral health. We believe in personalized care tailored to each patient's unique needs.</p>
                     <div class="grid grid-cols-2 gap-4 mt-8">
                         <div class="flex items-center">
@@ -236,10 +263,10 @@
                 </div>
                 
                 <div class="md:w-1/2 grid grid-cols-2 gap-4 animate-on-scroll">
-                    <img src="about3.jpg" alt="Modern Dental Clinic Interior" class="rounded-lg shadow-lg h-64 object-cover">
-                    <img src="about1.png" alt="Professional Dental Team" class="rounded-lg shadow-lg h-64 object-cover mt-8">
-                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Advanced Dental Equipment" class="rounded-lg shadow-lg h-64 object-cover">
-                    <img src="about2.png" alt="Patient Consultation" class="rounded-lg shadow-lg h-64 object-cover mt-8">
+                    <img src="about3.jpg" alt="Modern Dental Clinic Interior" class="rounded-lg shadow-lg h-64 object-cover" loading="lazy" decoding="async">
+                    <img src="about1.png" alt="Professional Dental Team" class="rounded-lg shadow-lg h-64 object-cover mt-8" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Advanced Dental Equipment" class="rounded-lg shadow-lg h-64 object-cover" loading="lazy" decoding="async">
+                    <img src="about2.png" alt="Patient Consultation" class="rounded-lg shadow-lg h-64 object-cover mt-8" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -249,100 +276,259 @@
     <section id="services" class="py-20 bg-light">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Dental Services</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We offer a comprehensive range of dental services using the latest techniques and technology to ensure optimal oral health and beautiful smiles.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Dental Services in Nairobi CBD</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Seromba Dentals provides modern dental services in Nairobi CBD, including dental implants, surgical implant placement, dentures, teeth whitening, braces, gum care, dental checkups, X-rays, root canals, fillings, extractions, crowns, bridges, dental splinting, and family dentistry.</p>
                 <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="service-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300 animate-on-scroll">
-                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                        <i class="fas fa-teeth text-primary text-2xl"></i>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-teeth-whitening-nairobi-unique.png" alt="Professional teeth whitening patient with shade guide at Seromba Dentals in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-teeth text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Professional Teeth Whitening in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Safe, professionally supervised whitening in Nairobi CBD to remove stains and brighten your smile with natural-looking results.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Fast in-clinic whitening</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Reduced sensitivity approach</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Basic, Premium, and Deluxe packages</li>
+                        </ul>
+                        <a href="teeth-whitening.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Teeth Whitening</h3>
-                    <p class="text-gray-600 mb-4">Professional teeth whitening treatments to brighten your smile safely and effectively.</p>
-                    <ul class="text-gray-600 text-sm mb-4">
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Advanced whitening technology</li>
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Customized treatment plans</li>
-                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Long-lasting results</li>
-                    </ul>
-                    <a href="teeth-whitening.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="service-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300 animate-on-scroll">
-                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                        <i class="fas fa-teeth-open text-primary text-2xl"></i>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-dental-implants-nairobi-unique.png" alt="Dental implant patient with implant model at Seromba Dentals in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-teeth-open text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Dental Implants in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Restore missing teeth with strong, natural-looking dental implants planned for comfort, function, and long-term oral health.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Single tooth implants</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Multiple implant solutions</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Full mouth implant restorations</li>
+                        </ul>
+                        <a href="dental-implants.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Dental Implants</h3>
-                    <p class="text-gray-600 mb-4">Replace missing teeth with natural-looking, durable dental implants.</p>
-                    <ul class="text-gray-600 text-sm mb-4">
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Titanium implant posts</li>
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Natural appearance</li>
-                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Long-term solution</li>
-                    </ul>
-                    <a href="dental-implants.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                </div>
+
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-surgical-implant-placement-nairobi.png" alt="Surgical implant placement patient with implant guide in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-screwdriver-wrench text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Surgical Implant Placement in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Precise dental implant surgery in Nairobi CBD to replace missing teeth with stable, long-lasting implant support.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Implant suitability assessment</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Titanium implant placement</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Healing and restoration planning</li>
+                        </ul>
+                        <a href="surgical-implant-placement.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    </div>
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="service-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300 animate-on-scroll">
-                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                        <i class="fas fa-brain text-primary text-2xl"></i>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-orthodontics-braces-nairobi-unique.png" alt="Orthodontics and braces patient with aligner case at Seromba Dentals in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-teeth text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Orthodontics &amp; Braces in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Straighten crowded, spaced, or misaligned teeth with braces and clear aligner options for children, teens, and adults.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Traditional metal braces</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Clear aligners and ceramic braces</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Personalized smile planning</li>
+                        </ul>
+                        <a href="orthodontics.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Orthodontics</h3>
-                    <p class="text-gray-600 mb-4">Straighten your teeth with traditional braces or clear aligners for a perfect smile.</p>
-                    <ul class="text-gray-600 text-sm mb-4">
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Traditional braces</li>
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Invisalign clear aligners</li>
-                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Personalized treatment</li>
-                    </ul>
-                    <a href="orthodontics.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 4 -->
-                <div class="service-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300 animate-on-scroll">
-                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                        <i class="fas fa-tooth text-primary text-2xl"></i>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-cosmetic-dentistry-nairobi.png" alt="Cosmetic dentistry patient with veneer shade guide in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-tooth text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Cosmetic Dentistry in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Improve tooth colour, shape, balance, and confidence with veneers, bonding, whitening, and smile makeover planning.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Porcelain veneers and bonding</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Smile makeover planning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Natural-looking cosmetic results</li>
+                        </ul>
+                        <a href="cosmetic-dentistry.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Cosmetic Dentistry</h3>
-                    <p class="text-gray-600 mb-4">Enhance your smile with veneers, bonding, and other cosmetic procedures.</p>
-                    <ul class="text-gray-600 text-sm mb-4">
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Porcelain veneers</li>
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Dental bonding</li>
-                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Smile makeovers</li>
-                    </ul>
-                    <a href="cosmetic-dentistry.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 5 -->
-                <div class="service-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300 animate-on-scroll">
-                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                        <i class="fas fa-heartbeat text-primary text-2xl"></i>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-periodontal-care-nairobi-graphic.png" alt="Periodontal care and gum disease treatment graphic in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-heartbeat text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Periodontal Care &amp; Gum Disease Treatment in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Gum disease treatment in Nairobi CBD for bleeding gums, gum recession, bad breath, and periodontal infection.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Deep cleaning and maintenance</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Gum grafting and surgery</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Bone regeneration support</li>
+                        </ul>
+                        <a href="periodontal-care.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Periodontal Care</h3>
-                    <p class="text-gray-600 mb-4">Treatment for gum disease to restore and maintain healthy gums.</p>
-                    <ul class="text-gray-600 text-sm mb-4">
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Deep cleaning</li>
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Gum grafting</li>
-                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Regenerative procedures</li>
-                    </ul>
-                    <a href="periodontal-care.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                 </div>
                 
                 <!-- Service 6 -->
-                <div class="service-card bg-white rounded-xl shadow-lg p-6 transition-all duration-300 animate-on-scroll">
-                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                        <i class="fas fa-child text-primary text-2xl"></i>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-dental-examinations-nairobi-graphic.png" alt="Dental and oral examination tools for checkups in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-search text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Dental &amp; Oral Examinations in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive dental checkups in Nairobi to detect cavities, gum disease, infections, bite issues, and tooth wear early.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Full oral health assessment</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Gum and cavity screening</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Preventive care planning</li>
+                        </ul>
+                        <a href="dental-examinations.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Pediatric Dentistry</h3>
-                    <p class="text-gray-600 mb-4">Specialized dental care for children in a fun, comfortable environment.</p>
-                    <ul class="text-gray-600 text-sm mb-4">
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Child-friendly atmosphere</li>
-                        <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Preventive education</li>
-                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Early intervention</li>
-                    </ul>
-                    <a href="pediatric-dentistry.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-dental-x-rays-nairobi-graphic.png" alt="Dental X-ray imaging monitor and sensor in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-x-ray text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Dental X-Rays in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Modern dental imaging in Nairobi CBD for hidden decay, infections, bone loss, impacted teeth, and treatment planning.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Bitewing and periapical X-rays</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Panoramic imaging support</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Safe diagnostic planning</li>
+                        </ul>
+                        <a href="dental-x-rays.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-root-canal-treatment-nairobi-graphic.png" alt="Root canal treatment tooth model and dental instruments in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-tooth text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Root Canal Treatment in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Gentle root canal therapy in Nairobi to relieve tooth pain, remove infection, and preserve your natural tooth.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Tooth pain diagnosis</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Infection removal and sealing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Filling or crown restoration</li>
+                        </ul>
+                        <a href="root-canal-treatment.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 9 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-fillings-extractions-nairobi-graphic.png" alt="Dental fillings and extractions treatment graphic in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-teeth-open text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Dental Fillings &amp; Extractions in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Repair cavities with tooth-colored fillings or remove severely damaged teeth safely when extraction is necessary.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Tooth-colored fillings</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Safe tooth extractions</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Recovery and aftercare</li>
+                        </ul>
+                        <a href="dental-fillings-extractions.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 10 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-crowns-bridgework-nairobi-graphic.png" alt="Dental crowns and bridgework model in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-teeth text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Dental Crowns &amp; Bridgework in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Restore damaged teeth and replace missing teeth with durable, natural-looking crowns and dental bridges.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Crowns for weak teeth</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Bridgework for missing teeth</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Natural-looking restoration</li>
+                        </ul>
+                        <a href="dental-crowns-bridgework.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-dentures-nairobi.png" alt="Denture patient holding denture case in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-teeth text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Dentures in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Custom full, partial, immediate, and flexible dentures designed to restore chewing, speech, and smile confidence.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Full and partial dentures</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Comfortable fitting process</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Natural-looking tooth replacement</li>
+                        </ul>
+                        <a href="dentures.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-dental-splinting-nairobi.png" alt="Dental splinting patient with splinted teeth model in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-link text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Dental Splinting in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Stabilize loose or shifting teeth caused by gum disease, trauma, bone loss, or bite pressure.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Loose tooth stabilization</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Minimally invasive support</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Gum health follow-up care</li>
+                        </ul>
+                        <a href="dental-splinting.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 11 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 animate-on-scroll">
+                    <img src="service-pediatric-dentistry-nairobi.png" alt="Child patient for pediatric dentistry in Nairobi CBD" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+                    <div class="p-6">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
+                            <i class="fas fa-child text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Pediatric Dentistry in Nairobi</h3>
+                        <p class="text-gray-600 mb-4">Gentle child dental care in Nairobi CBD for checkups, prevention, fillings, tooth development, and oral hygiene habits.</p>
+                        <ul class="text-gray-600 text-sm mb-4">
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Child dental checkups</li>
+                            <li class="flex items-center mb-1"><i class="fas fa-check text-accent mr-2"></i> Preventive care and education</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Growth and bite monitoring</li>
+                        </ul>
+                        <a href="pediatric-dentistry.html" class="text-primary font-medium hover:text-secondary transition-colors">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -420,106 +606,124 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 animate-on-scroll">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Corporate Partners</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We're proud to collaborate with leading organizations in healthcare and dental technology.</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">We're proud to collaborate with leading healthcare, insurance, and corporate partners that support accessible dental care in Nairobi.</p>
                 <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
             </div>
             
             <!-- Partners Carousel -->
             <div class="partners-carousel-container overflow-hidden relative">
                 <div class="partners-carousel flex animate-scroll-right">
-                    <!-- Original set of all 14 partners -->
+                    <!-- Original set of all partners -->
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="old mutual.png" alt="Old Mutual" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="old mutual.png" alt="Old Mutual" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="mtiba.png" alt="Mtiba" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="mtiba.png" alt="Mtiba" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="Kenbright.png" alt="Kenbright" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="Kenbright.png" alt="Kenbright" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="pacis.png" alt="Pacis Insurance Company Ltd" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="britam.png" alt="Britam Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="AAR-Insurance.jpg" alt="AAR Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="pioneer.png" alt="Pioneer" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="APA-Insurance.png" alt="APA Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
+                        <img src="pacis.png" alt="Pacis Insurance Company Ltd" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
+                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
+                        <img src="pioneer.png" alt="Pioneer" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6 bg-white rounded-lg p-1 md:p-2">
-                        <img src="mua.png" alt="MUA" class="h-12 md:h-20 w-12 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="mua.png" alt="MUA" class="h-12 md:h-20 w-12 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="lucent.png" alt="Lucent" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="lucent.png" alt="Lucent" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6 bg-white rounded-lg p-1 md:p-2">
-                        <img src="eabl.png" alt="EABL" class="h-12 md:h-20 w-12 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="eabl.png" alt="EABL" class="h-12 md:h-20 w-12 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="heritage.jpg" alt="Heritage Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="heritage.jpg" alt="Heritage Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="mtn.png" alt="MTN" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="mtn.png" alt="MTN" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="liaison.png" alt="Liaison Group" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="liaison.png" alt="Liaison Group" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="kenyanalliance.png" alt="Kenyan Alliance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="kenyanalliance.png" alt="Kenyan Alliance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="cic.png" alt="CIC Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="cic.png" alt="CIC Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="star.png" alt="Star Health" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="star.png" alt="Star Health" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     
                     <!-- Duplicate set for seamless infinite scroll -->
                      
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="old mutual.png" alt="Old Mutual" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="old mutual.png" alt="Old Mutual" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="pacis.png" alt="Pacis Insurance Company Ltd" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="pacis.png" alt="Pacis Insurance Company Ltd" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="mtiba.png" alt="Mtiba" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="mtiba.png" alt="Mtiba" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="Kenbright.png" alt="Kenbright" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="Kenbright.png" alt="Kenbright" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="britam.png" alt="Britam Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="pioneer.png" alt="Pioneer" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="AAR-Insurance.jpg" alt="AAR Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
+                        <img src="APA-Insurance.png" alt="APA Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
+                        <img src="Kenya-Airways.png" alt="Kenya Airways" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
+                        <img src="pioneer.png" alt="Pioneer" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6 bg-white rounded-lg p-1 md:p-2">
-                        <img src="mua.png" alt="MUA" class="h-12 md:h-20 w-12 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="mua.png" alt="MUA" class="h-12 md:h-20 w-12 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="lucent.png" alt="Lucent" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="lucent.png" alt="Lucent" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6 bg-white rounded-lg p-1 md:p-2">
-                        <img src="eabl.png" alt="EABL" class="h-12 md:h-20 w-12 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="eabl.png" alt="EABL" class="h-12 md:h-20 w-12 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="heritage.jpg" alt="Heritage Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="heritage.jpg" alt="Heritage Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="mtn.png" alt="MTN" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="mtn.png" alt="MTN" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="liaison.png" alt="Liaison Group" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="liaison.png" alt="Liaison Group" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="kenyanalliance.png" alt="Kenyan Alliance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="kenyanalliance.png" alt="Kenyan Alliance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="cic.png" alt="CIC Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="cic.png" alt="CIC Insurance" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                     <div class="partner-item flex-shrink-0 mx-0 md:mx-6">
-                        <img src="star.png" alt="Star Health" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300">
+                        <img src="star.png" alt="Star Health" class="h-14 md:h-24 w-14 md:w-auto object-contain hover:scale-105 transition-all duration-300" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -630,9 +834,15 @@
                                     <option>Orthodontics</option>
                                     <option>Cosmetic Dentistry</option>
                                     <option>Periodontal Care</option>
+                                    <option>Dental &amp; Oral Examinations</option>
+                                    <option>Dental X-Rays</option>
                                     <option>Pediatric Dentistry</option>
-                                    <option>Extraction</option>
+                                    <option>Dental Fillings &amp; Extractions</option>
                                     <option>Root Canal Treatment</option>
+                                    <option>Dental Crowns &amp; Bridgework</option>
+                                    <option>Surgical Implant Placement</option>
+                                    <option>Dentures</option>
+                                    <option>Dental Splinting</option>
                                     <option>CONSULTATION</option>
                                 </select>
                             </div>
@@ -687,10 +897,10 @@
                 <div>
                     <div class="flex items-center mb-6">
                         <div class="w-20 h-16 bg-white flex items-center justify-center p-2">
-                            <img src="logo.png" alt="Seromba Dentals Logo" class="w-16 h-12 object-contain">
+                            <img src="logo.png" alt="Seromba Dentals Clinic Logo" class="w-16 h-12 object-contain" loading="lazy" decoding="async">
                         </div>
                     </div>
-                    <p class="text-gray-400 mb-6">Providing exceptional dental care with cutting-edge technology and a compassionate approach in the heart of Nairobi.</p>
+                    <p class="text-gray-400 mb-6">Providing modern dental care with advanced technology and a compassionate approach in Nairobi CBD.</p>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com/share/16JurNQAEh/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-primary transition-colors">
                             <i class="fab fa-facebook-f"></i>
@@ -722,11 +932,19 @@
                 <div>
                     <h4 class="text-xl font-bold mb-6">Our Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Teeth Whitening</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Dental Implants</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Orthodontics</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Periodontal Care</a></li>
+                        <li><a href="teeth-whitening.html" class="text-gray-400 hover:text-white transition-colors">Teeth Whitening</a></li>
+                        <li><a href="dental-implants.html" class="text-gray-400 hover:text-white transition-colors">Dental Implants</a></li>
+                        <li><a href="orthodontics.html" class="text-gray-400 hover:text-white transition-colors">Orthodontics</a></li>
+                        <li><a href="cosmetic-dentistry.html" class="text-gray-400 hover:text-white transition-colors">Cosmetic Dentistry</a></li>
+                        <li><a href="periodontal-care.html" class="text-gray-400 hover:text-white transition-colors">Periodontal Care</a></li>
+                        <li><a href="dental-examinations.html" class="text-gray-400 hover:text-white transition-colors">Dental Examinations</a></li>
+                        <li><a href="dental-x-rays.html" class="text-gray-400 hover:text-white transition-colors">Dental X-Rays</a></li>
+                        <li><a href="root-canal-treatment.html" class="text-gray-400 hover:text-white transition-colors">Root Canal Treatment</a></li>
+                        <li><a href="dental-fillings-extractions.html" class="text-gray-400 hover:text-white transition-colors">Fillings &amp; Extractions</a></li>
+                        <li><a href="dental-crowns-bridgework.html" class="text-gray-400 hover:text-white transition-colors">Crowns &amp; Bridgework</a></li>
+                        <li><a href="surgical-implant-placement.html" class="text-gray-400 hover:text-white transition-colors">Surgical Implant Placement</a></li>
+                        <li><a href="dentures.html" class="text-gray-400 hover:text-white transition-colors">Dentures</a></li>
+                        <li><a href="dental-splinting.html" class="text-gray-400 hover:text-white transition-colors">Dental Splinting</a></li>
                     </ul>
                 </div>
                 
@@ -812,3 +1030,4 @@
     <script src="footer-date.js"></script>
 </body>
 </html>
+
