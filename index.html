@@ -67,13 +67,33 @@
             min-height: 22rem;
             width: 100%;
         }
+        .patient-review-copy {
+            white-space: pre-line;
+        }
         .google-review-control:disabled {
             opacity: 0.35;
             cursor: not-allowed;
         }
         @media (max-width: 768px) {
             .patient-review-card {
-                min-height: auto;
+                min-height: 18rem;
+            }
+            .patient-review-copy {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 6;
+                overflow: hidden;
+                white-space: normal;
+                font-size: 0.95rem;
+                line-height: 1.55;
+            }
+        }
+        @media (max-width: 480px) {
+            .patient-review-card {
+                min-height: 17rem;
+            }
+            .patient-review-copy {
+                -webkit-line-clamp: 5;
             }
         }
         .map-container {
@@ -1337,28 +1357,28 @@
                 const rating = Number(review.rating);
                 const colorClass = reviewAvatarColors[index % reviewAvatarColors.length];
                 const reviewBody = review.text
-                    ? `<p class="text-gray-700 text-lg leading-relaxed italic whitespace-pre-line mb-6">"${escapeHTML(review.text)}"</p>`
-                    : '<p class="text-gray-700 text-lg leading-relaxed mb-6">5-star rating left on Google.</p>';
+                    ? `<p class="patient-review-copy text-gray-700 text-base md:text-lg leading-relaxed italic mb-4 md:mb-6">"${escapeHTML(review.text)}"</p>`
+                    : '<p class="patient-review-copy text-gray-700 text-base md:text-lg leading-relaxed mb-4 md:mb-6">5-star rating left on Google.</p>';
                 return `
                     <article class="google-review-slide p-1">
-                        <div class="patient-review-card bg-light border border-blue-100 rounded-xl shadow-md p-6 md:p-8">
-                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5 mb-6">
+                        <div class="patient-review-card bg-light border border-blue-100 rounded-xl shadow-md p-5 md:p-8">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 md:gap-5 mb-4 md:mb-6">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-full ${colorClass} text-white font-bold shadow-sm flex items-center justify-center">${initial}</div>
+                                    <div class="w-11 h-11 md:w-12 md:h-12 rounded-full ${colorClass} text-white font-bold shadow-sm flex items-center justify-center">${initial}</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-dark">${name}</h3>
+                                        <h3 class="text-lg md:text-xl font-bold text-dark">${name}</h3>
                                         <p class="text-sm text-gray-500">${meta}${newBadge}</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="flex text-accent text-lg md:justify-end" aria-label="${escapeHTML(rating)} out of 5 stars">
+                                    <div class="flex text-accent text-base md:text-lg md:justify-end" aria-label="${escapeHTML(rating)} out of 5 stars">
                                         ${renderStars(rating)}
                                     </div>
                                     <p class="text-sm text-gray-500 mt-1 md:text-right">Google review</p>
                                 </div>
                             </div>
                             ${reviewBody}
-                            <div class="flex items-center text-primary font-semibold">
+                            <div class="flex items-center text-primary font-semibold text-sm md:text-base">
                                 <i class="fab fa-google mr-2"></i>
                                 <span>Verified Google feedback</span>
                             </div>
