@@ -59,6 +59,23 @@
         .testimonial-card:hover {
             transform: scale(1.03);
         }
+        .google-review-slide {
+            min-width: 100%;
+            display: flex;
+        }
+        .patient-review-card {
+            min-height: 22rem;
+            width: 100%;
+        }
+        .google-review-control:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+        @media (max-width: 768px) {
+            .patient-review-card {
+                min-height: auto;
+            }
+        }
         .map-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -547,65 +564,53 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Patient Testimonials</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Hear what our patients have to say about their experience at Seromba Dentals.</p>
-                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_18rem] gap-8 items-end mb-12">
+                <div class="text-center lg:text-left animate-on-scroll">
+                    <p class="text-sm uppercase tracking-widest text-accent font-semibold mb-3">Real Google reviews</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Patient Testimonials</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto lg:mx-0">Real patient feedback shared on Google for Seromba Dentals Clinic Nairobi.</p>
+                    <div class="w-20 h-1 bg-accent mx-auto lg:mx-0 mt-4"></div>
+                </div>
+
+                <div class="bg-light border border-blue-100 rounded-xl shadow-md p-6 animate-on-scroll">
+                    <div class="flex items-end justify-between gap-4 mb-3">
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Google rating</p>
+                            <div class="text-5xl font-bold text-dark leading-none">5.0</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="flex text-accent text-lg mb-1" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600">51 reviews</p>
+                        </div>
+                    </div>
+                    <a href="https://share.google/QpjayL1ojf5CCCcMo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
+                        <i class="fab fa-google mr-2"></i>
+                        View on Google
+                    </a>
+                </div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-light rounded-xl shadow-md p-6 animate-on-scroll">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4"></div>
-                        <div>
-                            <h4 class="font-bold text-dark">Sarah Johnson</h4>
-                            <div class="flex text-accent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">"The team at Seromba Dentals made my dental experience comfortable and pain-free. Their advanced technology and caring approach truly set them apart."</p>
+
+            <div class="max-w-4xl mx-auto animate-on-scroll">
+                <div class="overflow-hidden">
+                    <div id="google-review-track" class="flex transition-transform duration-500 ease-in-out"></div>
                 </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-light rounded-xl shadow-md p-6 animate-on-scroll">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4"></div>
-                        <div>
-                            <h4 class="font-bold text-dark">Michael Kimani</h4>
-                            <div class="flex text-accent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">"I was nervous about getting implants, but the doctors explained everything clearly and made me feel at ease. The results exceeded my expectations!"</p>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-light rounded-xl shadow-md p-6 animate-on-scroll">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4"></div>
-                        <div>
-                            <h4 class="font-bold text-dark">Emily Wanjiru</h4>
-                            <div class="flex text-accent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">"The whitening treatment gave me the confident smile I always wanted. The staff was professional and the clinic is absolutely modern and clean."</p>
+
+                <div class="flex items-center justify-center gap-4 mt-6">
+                    <button id="google-review-prev" type="button" class="google-review-control w-11 h-11 rounded-full bg-white text-primary shadow-md hover:bg-primary hover:text-white transition-colors flex items-center justify-center" aria-label="Previous patient testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <span id="google-review-counter" class="text-sm font-semibold text-gray-600 min-w-[4.5rem] text-center"></span>
+
+                    <button id="google-review-next" type="button" class="google-review-control w-11 h-11 rounded-full bg-white text-primary shadow-md hover:bg-primary hover:text-white transition-colors flex items-center justify-center" aria-label="Next patient testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1026,7 +1031,7 @@
         // Scroll to contact section
         function scrollToContact() {
             // Redirect to calendar page
-            window.location.href = 'calendar/';
+            window.location.href = 'calendar';
         }
 
         // Scroll to services section
@@ -1036,8 +1041,349 @@
             });
         }
 
+        const googleReviews = [
+            {
+                name: "Dickson Muguru",
+                meta: "Local Guide - 37 reviews - 9 photos",
+                dateISO: "2026-05-16",
+                rating: 5,
+                text: "Kind gentle and professional"
+            },
+            {
+                name: "Clare mutw'ale",
+                meta: "1 review",
+                dateISO: "2026-05-16",
+                rating: 5
+            },
+            {
+                name: "MIRIAM A. OKWOMI",
+                meta: "1 review",
+                dateISO: "2026-05-16",
+                edited: true,
+                rating: 5,
+                text: "Excellent dental service with professional and caring staff. The dentist explained every procedure clearly and made me feel comfortable throughout the visit... I recommend"
+            },
+            {
+                name: "edith mburu",
+                meta: "1 review",
+                dateISO: "2026-05-16",
+                rating: 5,
+                text: "Excellent"
+            },
+            {
+                name: "Ambrose Munguti",
+                meta: "Local Guide - 17 reviews - 1 photo",
+                dateISO: "2026-05-16",
+                rating: 5,
+                text: "Excellent service.... The entire team is warm, compassionate and very welcoming. Absolutely top-notch service.!"
+            },
+            {
+                name: "C M",
+                meta: "3 reviews - 3 photos",
+                dateISO: "2026-05-16",
+                rating: 5,
+                text: "Excellent service, root canal experience"
+            },
+            {
+                name: "Markjames Morara",
+                meta: "1 review",
+                dateISO: "2026-05-16",
+                edited: true,
+                rating: 5,
+                text: "The dental team made me feel completely at ease. They explained every step of my root canal and were very attentive to my comfort throughout. The office is spotless, and I didn't have to wait past my appointment time. Highly recommend for anyone with dental queries."
+            },
+            {
+                name: "donatta munyao",
+                meta: "1 review",
+                dateISO: "2026-05-16",
+                edited: true,
+                rating: 5,
+                text: "Simply the best dental experience ever. Thank you."
+            },
+            {
+                name: "Beverl Bevah",
+                meta: "Local Guide - 97 reviews",
+                dateISO: "2026-05-09",
+                edited: true,
+                rating: 5
+            },
+            {
+                name: "kelvin karanja",
+                meta: "1 review",
+                dateISO: "2026-05-09",
+                rating: 5,
+                text: "I recently visited Seromba Dentals, and the experience genuinely exceeded my expectations. From the moment I walked in, the team made me feel calm and well taken care of. The clinic is spotless, modern, and equipped with technology that immediately gives you confidence in the quality of care.\n\nWhat stood out most was how clearly everything was explained, no rush, no pressure, just honest guidance and a gentle approach. The procedure itself was surprisingly comfortable, and the results were better than I imagined.\n\nIt's rare to find a dental clinic that combines professionalism, warmth, and precision this well. Seromba Dentals has definitely earned my trust."
+            },
+            {
+                name: "Purity Wanza",
+                meta: "1 review",
+                dateISO: "2026-05-09",
+                rating: 5,
+                text: "I had a really great experience at Seromba dental clinic! The staff were warm and professional, and the dentist took time to explain everything clearly, which made me feel at ease. The service was smooth, gentle, and efficient--I honestly couldn't have asked for better care. Highly recommend them if you're looking for quality dental services!"
+            },
+            {
+                name: "Beth Thuita",
+                meta: "3 reviews",
+                dateISO: "2026-05-03",
+                rating: 5,
+                text: "Awesome experience"
+            },
+            {
+                name: "Vivian Ndunge",
+                meta: "1 review",
+                dateISO: "2026-05-03",
+                rating: 5,
+                text: "I never thought dentists were good until i walked into seromba dentalss. I had quite the experience, thank you for your lovely services"
+            },
+            {
+                name: "Bree Mwikali",
+                meta: "1 review",
+                dateISO: "2026-05-03",
+                rating: 5,
+                text: "The service was very great from the moment I walked in to the time I left. I got my teeth washed and let me tell you ... nashindana na jua kuwaka nikismile."
+            },
+            {
+                name: "Purity Ndoro",
+                meta: "1 review",
+                dateISO: "2026-04-30",
+                rating: 5,
+                text: "They are very professional and they care for their clients. I love there services 10/10"
+            },
+            {
+                name: "CAROLINE NJOMO",
+                meta: "2 reviews",
+                dateISO: "2026-04-30",
+                rating: 5,
+                text: "Professional and friendly dental care. I recommend."
+            },
+            {
+                name: "rose kimeu",
+                meta: "2 reviews - 1 photo",
+                dateISO: "2025-05-30",
+                rating: 5,
+                text: "Excellent attention."
+            },
+            {
+                name: "Nela Kirui",
+                meta: "1 review",
+                dateISO: "2024-05-30",
+                rating: 5,
+                text: "Friendly staff with high levels of professionalism. I fell and chipped my tooth and I thought that was it. I was stuck with a crooked smile, but thanks to these guys, I have my natural smile back after they fixed my tooth. Thank you."
+            },
+            {
+                name: "MARY GAKUYA",
+                meta: "1 review",
+                dateISO: "2024-05-30",
+                rating: 5,
+                text: "Very friendly workers and amazing services..I would highly recommend"
+            },
+            {
+                name: "Patriciah Loko",
+                meta: "1 review",
+                dateISO: "2024-05-30",
+                rating: 5,
+                text: "I can now smile again. Thank you for restoring my teeth, white kama snow."
+            },
+            {
+                name: "Daniel Abuga",
+                meta: "1 review",
+                dateISO: "2024-05-30",
+                rating: 5,
+                text: "Amazing services. Went for clinic, friendly staff and affordable services. Greatly recommend."
+            },
+            {
+                name: "Carol Wanja",
+                meta: "1 review",
+                dateISO: "2024-05-30",
+                rating: 5,
+                text: "I can now afford a smile. Nice place to get dental services"
+            },
+            {
+                name: "DORCAS ABUGA",
+                meta: "1 review",
+                dateISO: "2024-05-30",
+                rating: 5,
+                text: "I got my braces at a good price and I love them. I recommend"
+            },
+            {
+                name: "Essay Writer",
+                meta: "1 review",
+                dateISO: "2024-05-30",
+                rating: 5,
+                text: "Excellent services. I recommend"
+            },
+            {
+                name: "Ricky Smith",
+                meta: "1 review",
+                dateISO: "2024-05-30",
+                rating: 5,
+                text: "Good services. I recommend"
+            }
+        ];
+        const reviewAvatarColors = [
+            "bg-green-600",
+            "bg-blue-600",
+            "bg-purple-600",
+            "bg-pink-600",
+            "bg-cyan-600",
+            "bg-emerald-600",
+            "bg-indigo-600",
+            "bg-rose-600"
+        ];
+        let googleReviewIndex = 0;
+
+        function escapeHTML(value) {
+            return String(value)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function renderStars(rating) {
+            const safeRating = Math.max(0, Math.min(5, Number(rating) || 0));
+            return Array.from({ length: 5 }, (_, index) => {
+                const starClass = index < safeRating ? 'fas fa-star' : 'far fa-star';
+                return `<i class="${starClass}"></i>`;
+            }).join('');
+        }
+
+        function parseReviewDate(dateISO) {
+            const [year, month, day] = String(dateISO).split('-').map(Number);
+            return new Date(year, month - 1, day);
+        }
+
+        function getReviewDaysAgo(dateISO) {
+            if (!dateISO) return null;
+            const today = new Date();
+            const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+            const reviewDate = parseReviewDate(dateISO);
+            return Math.max(0, Math.floor((startOfToday - reviewDate) / 86400000));
+        }
+
+        function pluralize(value, singular) {
+            return `${value} ${singular}${value === 1 ? '' : 's'} ago`;
+        }
+
+        function getReviewTimeline(review) {
+            const daysAgo = getReviewDaysAgo(review.dateISO);
+            if (daysAgo === null) return review.date || '';
+
+            let label;
+            if (daysAgo === 0) {
+                label = 'today';
+            } else if (daysAgo === 1) {
+                label = 'yesterday';
+            } else if (daysAgo < 7) {
+                label = pluralize(daysAgo, 'day');
+            } else if (daysAgo < 28) {
+                label = pluralize(Math.max(1, Math.round(daysAgo / 7)), 'week');
+            } else if (daysAgo < 60) {
+                label = 'a month ago';
+            } else if (daysAgo < 365) {
+                label = pluralize(Math.max(2, Math.round(daysAgo / 30)), 'month');
+            } else {
+                label = pluralize(Math.max(1, Math.floor(daysAgo / 365)), 'year');
+            }
+
+            return review.edited ? `Edited ${label}` : label;
+        }
+
+        function isNewGoogleReview(review) {
+            const daysAgo = getReviewDaysAgo(review.dateISO);
+            return daysAgo !== null && daysAgo <= 21;
+        }
+
+        function getSortedGoogleReviews() {
+            return googleReviews.slice().sort((first, second) => {
+                return parseReviewDate(second.dateISO) - parseReviewDate(first.dateISO);
+            });
+        }
+
+        function updateGoogleReviewCarousel() {
+            const track = document.getElementById('google-review-track');
+            const prevButton = document.getElementById('google-review-prev');
+            const nextButton = document.getElementById('google-review-next');
+            const counter = document.getElementById('google-review-counter');
+            const reviews = getSortedGoogleReviews();
+            if (!track || !prevButton || !nextButton) return;
+
+            if (googleReviewIndex >= reviews.length) googleReviewIndex = 0;
+            track.style.transform = `translateX(-${googleReviewIndex * 100}%)`;
+            prevButton.disabled = reviews.length <= 1;
+            nextButton.disabled = reviews.length <= 1;
+            if (counter) {
+                counter.textContent = reviews.length ? `${googleReviewIndex + 1} / ${reviews.length}` : '';
+            }
+        }
+
+        function renderGoogleReviews() {
+            const track = document.getElementById('google-review-track');
+            const prevButton = document.getElementById('google-review-prev');
+            const nextButton = document.getElementById('google-review-next');
+            if (!track || !prevButton || !nextButton) return;
+
+            const reviews = getSortedGoogleReviews();
+
+            track.innerHTML = reviews.map((review, index) => {
+                const name = escapeHTML(review.name || 'Google reviewer');
+                const timeline = getReviewTimeline(review);
+                const meta = [review.meta, timeline].filter(Boolean).map(escapeHTML).join(' &bull; ');
+                const newBadge = isNewGoogleReview(review)
+                    ? '<span class="inline-flex items-center px-2 py-0.5 ml-2 rounded border border-gray-300 text-xs font-bold text-dark align-middle">NEW</span>'
+                    : '';
+                const initial = name.trim().charAt(0).toUpperCase() || 'G';
+                const rating = Number(review.rating);
+                const colorClass = reviewAvatarColors[index % reviewAvatarColors.length];
+                const reviewBody = review.text
+                    ? `<p class="text-gray-700 text-lg leading-relaxed italic whitespace-pre-line mb-6">"${escapeHTML(review.text)}"</p>`
+                    : '<p class="text-gray-700 text-lg leading-relaxed mb-6">5-star rating left on Google.</p>';
+                return `
+                    <article class="google-review-slide p-1">
+                        <div class="patient-review-card bg-light border border-blue-100 rounded-xl shadow-md p-6 md:p-8">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5 mb-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full ${colorClass} text-white font-bold shadow-sm flex items-center justify-center">${initial}</div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-dark">${name}</h3>
+                                        <p class="text-sm text-gray-500">${meta}${newBadge}</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex text-accent text-lg md:justify-end" aria-label="${escapeHTML(rating)} out of 5 stars">
+                                        ${renderStars(rating)}
+                                    </div>
+                                    <p class="text-sm text-gray-500 mt-1 md:text-right">Google review</p>
+                                </div>
+                            </div>
+                            ${reviewBody}
+                            <div class="flex items-center text-primary font-semibold">
+                                <i class="fab fa-google mr-2"></i>
+                                <span>Verified Google feedback</span>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            prevButton.onclick = () => {
+                googleReviewIndex = (googleReviewIndex - 1 + reviews.length) % reviews.length;
+                updateGoogleReviewCarousel();
+            };
+
+            nextButton.onclick = () => {
+                googleReviewIndex = (googleReviewIndex + 1) % reviews.length;
+                updateGoogleReviewCarousel();
+            };
+
+            updateGoogleReviewCarousel();
+        }
+
         // Animation on scroll
         document.addEventListener('DOMContentLoaded', function() {
+            renderGoogleReviews();
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
